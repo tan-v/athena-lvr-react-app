@@ -1,0 +1,2 @@
+export const ESTIMATED_PROPERTY_VALUE_ERROR_MSG = 'Estimated Property value should be min 100,000 / max 2,500,000.';
+export const BORROW_AMOUNT_VALUE_ERROR_MSG = 'Borrow amount should be min 80,000 / max 2,000,000.';

@@ -1,0 +1,13 @@
+.Input {
+  border-left: none !important;
+}
+.Input-prefix {
+  background-color: #fff !important;
+  border-right: none !important;
+  font-weight: bold !important;
+  padding-right: 0 !important;
+}
+
+.Input-error {
+  color: red;
+}
