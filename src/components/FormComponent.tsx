@@ -16,7 +16,6 @@ interface FormProps {
 interface FormState {
   estimatedPropertyValue: string;
   borrowAmount: string;
-  lvr: number;
   errors: {
     estimatedPropertyValue: string,
     borrowAmount: string
@@ -84,7 +83,7 @@ export default class FormComponent extends Component<FormProps> {
       const estimatedPropValue = +this.removeCommaFromValue(estimatedPropertyValue);
       const borrowAmountValue = +this.removeCommaFromValue(borrowAmount);
       if (estimatedPropertyValue && borrowAmount) {
-        lvrPercentage = +(borrowAmountValue / estimatedPropValue).toFixed(2);
+        lvrPercentage = Number((borrowAmountValue / estimatedPropValue));
       }
     }
     this.onChangeLVR(lvrPercentage);
@@ -212,7 +211,6 @@ export default class FormComponent extends Component<FormProps> {
     return {
       estimatedPropertyValue: '',
       borrowAmount: '',
-      lvr: 0,
       errors: {
         estimatedPropertyValue: '',
         borrowAmount: ''

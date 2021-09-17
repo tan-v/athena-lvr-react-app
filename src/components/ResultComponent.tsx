@@ -19,7 +19,7 @@ export default class ResultComponent extends Component<ResultProps>  {
         </div>
         <h3 className="Result-heading">Your LVR is</h3>
         <h3 className="Result-lvr-percentage">
-          {this.props.lvrPercentage || "--"} %
+          {Math.round(this.props.lvrPercentage * 100) / 100 || "--"} %
         </h3>
       </div>
     )

@@ -11,13 +11,18 @@ interface AppState {
 export default class AppComponent extends Component {
   public state: AppState = {lvr: 0};
 
+  constructor(props: any) {
+    super(props);
+    this.setLvr = this.setLvr.bind(this);
+  }
+
   /**
    * sets lvr value in state
    *
    * @param {number} lvrValue
    * @memberof AppComponent
    */
-  private setLvr(lvrValue: number) {
+  public setLvr(lvrValue: number) {
     this.setState({lvr: lvrValue});
   }
 
